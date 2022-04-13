@@ -1,3 +1,4 @@
+import email
 from flask import Flask,render_template
 from flask_sqlalchemy import SQLAlchemy
 app= Flask(__name__)
@@ -12,8 +13,8 @@ class Student(db.Model):
     def __init__(self,name,email):
         self.name=name
         self.email=email
-db.session.add ()
-lBooks =db.ession.query(Book) #returns a Query object.
+db.session.add (email)
+lBooks =db.session.query(Book) #returns a Query object.
 for oBook in lBooks:
     print (oBook.name)
 @app.route('/', methods=['GET','POST'])
